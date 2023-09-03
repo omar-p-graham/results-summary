@@ -1,6 +1,4 @@
-fetch('../data.json')
-    .then(response => response.json())
-    .then(data => getData(data));
+fetch('../data.json').then(response => response.json()).then(data => getData(data));
 
 getData = (data)=>{
     data = JSON.parse(data);
