@@ -16,4 +16,9 @@ body{
     font-size: f.calcRem(18);
     height: 100vh;
     overflow-x: hidden;
+
+    @media (min-width: f.calcEm(992)){
+        display: grid;
+        place-items: center;
+    }
 }
