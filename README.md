@@ -10,6 +10,7 @@ This is a solution to the [Results summary component challenge on Frontend Mento
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
+  - [Difficulties](#difficulties)
 - [Author](#author)
 
 ## Overview
@@ -24,12 +25,12 @@ Users should be able to:
 
 ### Screenshot
 
-[Desktop](./assets/screenshots/desktop.png)
-[Mobile](./assets/screenshots/mobile.png)
+![Desktop](./assets/screenshots/desktop.png)
+![Mobile](./assets/screenshots/mobile.png)
 
 ### Links
 
-- Solution URL: (https://your-solution-url.com)
+- Solution URL: (https://www.frontendmentor.io/solutions/results-summary-using-html-scss-jsjquery-and-json-QA7wYn95_y)
 - Live Site URL: (https://omar-p-graham.github.io/results-summary/)
 
 ## My process
@@ -46,6 +47,12 @@ Users should be able to:
 - JavaScript
   - JQuery
   - JSON
+
+### Difficulties
+
+I was having a difficult time connecting the JSON file on GitHub. The connection between my JS file and the JSON file worked fine on my local machine via live server. However, the connection kept failing once the files were uploaded to GitHub.
+
+On my local machine I used `../data.json` to locate the file from my JS file while on GitHub I had to use `./data.json`. I don't understand why. 
 
 ## Author
 
