@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    $.getJSON("data.json", function(data){
+    $.getJSON("./data.json", function(data){
         $.each(data, function(key,value) {
             $('.'+data[key]['category'].toLowerCase()+' img').attr('src',data[key]['icon']); // insert icons from json file
             $('.'+data[key]['category'].toLowerCase()+' img').attr('alt','icon-'+data[key]['category'].toLowerCase()); // insert icons ALT text using json file
