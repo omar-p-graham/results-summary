@@ -1,12 +1,12 @@
-fetch('../data.json')
-    .then(response => response.json())
-    .then(data => getData(data));
-
-getData = (data)=>{
-    for(key in data){
-        document.querySelector('.'+data[key]['category'].toLowerCase()+' img').setAttribute('src',data[key]['icon']); // insert icons from json file
-        document.querySelector('.'+data[key]['category'].toLowerCase()+' img').setAttribute('alt','icon-'+data[key]['category'].toLowerCase()); // insert icons ALT text using json file
-        document.querySelector('.'+data[key]['category'].toLowerCase()+' h4').innerHTML = data[key]['category']; // insert category from json file
-        document.querySelector('.'+data[key]['category'].toLowerCase()+' span').innerHTML = data[key]['score']; // insert score from json file
-    }
-}
+$(document).ready(function(){
+    $.getJSON("../data.json", function(data){
+        $.each(data, function(key,value) {
+            $('.'+data[key]['category'].toLowerCase()+' img').attr('src',data[key]['icon']); // insert icons from json file
+            $('.'+data[key]['category'].toLowerCase()+' img').attr('alt','icon-'+data[key]['category'].toLowerCase()); // insert icons ALT text using json file
+            $('.'+data[key]['category'].toLowerCase()+' h4').html(data[key]['category']); // insert category from json file
+            $('.'+data[key]['category'].toLowerCase()+' span').html(data[key]['score']); // insert score from json file
+        });
+    }).fail(function(){
+        console.log("Unable to retrieve data");
+    });
+});
